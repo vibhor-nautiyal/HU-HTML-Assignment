@@ -17,7 +17,7 @@ Sample Project for HTML SCSS Track
 
 ## To get started:
 - `Edit index.html`
-- `Add data in mock.json suitable to you to render in HTML file`
+- `Don't change anything from Mock.json and use it as json structure for rendering`
 
 ## Setup and check lint-errors:
 ##### CLI:
