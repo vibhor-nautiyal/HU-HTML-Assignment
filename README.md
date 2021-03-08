@@ -1,6 +1,6 @@
 # HUV19.1 HTML CSS Final Assignment
 
-Sample Project for HTML SCSS Track
+Template Project for HTML SCSS Track
 
 
 ## Follow the below steps to run the project:
