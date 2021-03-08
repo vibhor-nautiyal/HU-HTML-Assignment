@@ -8,7 +8,7 @@ Sample Project for HTML SCSS Track
 1. Fork the repository
 2. Clone the repository
 3. `cd huv19.1-html-css-final-assignment`
-4. `npm i --save-dev parcel-bundler@1.12.3`
+4. `npm i `
 5. `npm start`
 
 
