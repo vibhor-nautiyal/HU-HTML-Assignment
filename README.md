@@ -18,3 +18,16 @@ Sample Project for HTML SCSS Track
 ## To get started:
 - `Edit index.html`
 - `Add data in mock.json suitable to you to render in HTML file`
+
+## Setup and check lint-errors:
+##### CLI:
+- `run: npm run lint`
+
+
+##### Editor
+- `Install sass-lint globally: npm i -g sass-lint`
+- `Install vscode extension: https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint`
+- `Install htmlhint-ng2 globally: npm i htmlhint-ng2 -D`
+
+
+
