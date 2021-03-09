@@ -1,0 +1,49 @@
+# Enginneered by: Avinash Kumar<avinash.kumar@hashedin.com> & Satya Kumar <satya.kumar@hashedin.com>
+image: google/cloud-sdk:alpine
+
+deploy_staging:
+  stage: deploy
+  environment: Staging
+  only:
+  - master
+  - pipeline
+  - build
+  before_script:
+  - "echo ${GITLAB_USER_LOGIN/./-}"
+  - "ServiceName=${GITLAB_USER_LOGIN/./-}"
+  - "echo $ServiceName"
+  - "echo $CI_PROJECT_NAME"
+  - |
+    cat <<EOF >> app.yaml
+    runtime: custom
+    env: flex
+    service: $ServiceName
+    EOF
+  - "cat app.yaml"
+  - |
+    cat <<EOF >> $CI_PIPELINE_ID.json
+    {
+      "type": "service_account",
+      "project_id": "confluent-validation",
+      "private_key_id": "0e4da4c7c13fac609c43ea4c75effa3fb7da20ee",
+      "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC9JR9PgCKBCrf4\nnZG/r2D/cKfdc/kV03RyCYkfTXba+Zxd+k2YcZZuoAfTedvtXfjH92rXwM2Wm9tv\nJ7vfgpsVjEVRpMxmvCflaEkTrinj7I868PV96Y3JZz9R0uEITrdT32DnAJqPxlPM\n/7wWcETxQdlB6t1RqHbfHVeUSAJ8gGHeI5qQE1zXWBSaccr0MF0yYMmV5c8i/kkA\ndJQH/HkqPsFPYDm4kvAauKzfCX9DlOkiTrMYN4bHKL3TGA0q3zonlTYqLU2uoOUf\ny5vUoufq0wE2413akr6J3Fq9rUDt0KejnoEYPPXs8FJBNIrSLcUoMdYtg75S87+Z\nNbRSwt5nAgMBAAECggEAXGLkf0V8FQGySJpWVYWJYFubcryx3qpRR15G/uYsdtrT\nOMgI3LwmmVRLXk04UiHDYZEFO+stwDHSpeGHj63QqF7CgRV4zXl8Fz6v6w/34B9s\n+oI1ttG8crKeqA3T4uXn/+ys/Ug7NpzN0+TZ7y/ZTOo3/02D2t3paiN/4qqlpD+M\n/kzOY17idlPdjFinEb7ICpFYxwd7kJpmTytLscKiYpvd4bsqHU7UdAXQcBNYQ5EI\n3XYVc6o/uzTY1xykCDYpUN/a0C8NnNbYjuNMnLI31We7uZKpPy1rRruzfIMlBj+l\nJgGBrKLUaYaUisCMZodzqyiQvl1uTFCJTKpR0OS2qQKBgQDzbvHDjXG9ui/menxA\n5QQSJ1hLRo1LfEyoi+tN9FdxM7BgZrisuG9eAxk8939Va4CaVijhn7kZDxeDSBAv\nohx7daqT7oO1EBEzla0nBOQR7KF4bkfPTRXSmCxtHDkEBPDTKTp95VMQIkbt1x9Z\nG2eL0Xx7UyaR44B0nJpbipD9UwKBgQDG6L0O+0uxQgmjwTTDIelp8RIs4QFveTCV\ndmMCCy5RmY/m8B2VXKTCmtLU70I/3HephbVWbU7frydbUO9SFlvGrQt7HkH2H8Tr\nh5vlrT8lxsrAqnymHzNX48e570tT4/+n53nW7MosEZLIkb2NFPmg9EbA8kpTpd1v\nfhnyix+kHQKBgQDvzPeN6pUEEBhFk505FCD5fRamOJ7RoGWnlwW56hwFYKS7ohUD\n2D+kvaqr+ybNT7QE1SE6eWwOOmawJVoEgk5KdDQPu+K0h1palXRXvqKo4ZCCoShO\nFqKLrOn+pdGomvFdIf0DrdcwSoPSoZq43Z0YB8n3dobFKfYNaYNI7+w6DwKBgQC5\nyd39Rl/W+5XBbM95jA1XNSMC5E/Q7WOh12h3GjZzZXnx/UnEnzoNw0s2NRyuRaFH\nqGpOhd7sM9ARDTHcfKHQmwVkREjcOaRXUt0c1IttH5d2CkhPakksyMdfNtInU4kS\nLbWyOI5GR0vRJ7/jLTpVSpVj12vxYbXJVAGseKJfSQKBgQCh32lkxDX+GQQKhWhl\nvPE0UL+9dkoBlaD6tlrsasE3JKsVnQ1cgr5lGVbjZJPe6deQjCSDKaXedKGLpaNL\nzqFP3WnlvA3kc0sehgT6j5sHT8w+tqrt0ElmdOvD3OD9AXdUuxveYUiJ/wnuLJF5\nHDThwjRu3HOayPAhS67pNliQHw==\n-----END PRIVATE KEY-----\n",
+      "client_email": "huappengineb@confluent-validation.iam.gserviceaccount.com",
+      "client_id": "108473989251602723405",
+      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+      "token_uri": "https://oauth2.googleapis.com/token",
+      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+      "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/huappengineb%40confluent-validation.iam.gserviceaccount.com"
+    }
+    EOF
+  - "cat $CI_PIPELINE_ID.json"
+
+
+  script:
+  - gcloud auth activate-service-account --key-file $CI_PIPELINE_ID.json
+  - gcloud --project confluent-validation app deploy
+  - url=$(gcloud app services browse $ServiceName --no-launch-browser --project confluent-validation)
+  - echo $url
+
+
+after_script:
+- rm $CI_PIPELINE_ID.json

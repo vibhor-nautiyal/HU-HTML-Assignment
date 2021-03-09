@@ -1,0 +1,48 @@
+# Enginneered by: Avinash Kumar<avinash.kumar@hashedin.com> & Satya Kumar <satya.kumar@hashedin.com>
+image: google/cloud-sdk:alpine
+
+deploy_staging:
+  stage: deploy
+  environment: Staging
+  only:
+  - master
+  - pipeline
+  before_script:
+  - "echo ${GITLAB_USER_LOGIN/./-}"
+  - "ServiceName=${GITLAB_USER_LOGIN/./-}"
+  - "echo $ServiceName"
+  - "echo $CI_PROJECT_NAME"
+  - |
+    cat <<EOF >> app.yaml
+    runtime: custom
+    env: flex
+    service: $ServiceName
+    EOF
+  - "cat app.yaml"
+  - |
+    cat <<EOF >> $CI_PIPELINE_ID.json
+    { 
+    "type": "service_account",
+    "project_id": "groupnexus-poc-285411",
+    "private_key_id": "37bb279e545a15c4dc3d0605dafafde508052ec4",
+    "private_key": "-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4cbJ1fbVUqoSo\\nuDLwZdERA4BfB/f1N1wwdwExTiSmcxeYcKo1UD47b+80CRnuWAEwX2Yt4E35t7pT\\nc/Z6jXcns7CX2Yl8mW0cYHHw4Lf+EMyRohtm1gOkXVzSn+Lpipa5ajpEsY2U63Sl\\ndDUx0oGC0/0niHcZMCS4c0OGn90mKoUW3adbygrBKPux0u3SrlITaRJNkIwRejvO\\nv3erdqb2ef1FKP6eha0CVzdNYfXKEYXDz1cyzTm6u5QNM+LDT2UQzE2FzKPRG/e7\\nPf0ZCwWghs3tQKkgyn0dSPi+34g/nc719DSwE8lkVWy/WIMHOMu9Ps+j3MLEAaLl\\nNLBbByB/AgMBAAECggEALyPwBpNgewkx6qVZb5O2QXDxqFgzCZtilohz55QfTeNw\\njmeNOR8PKMXNDzGcTQx1EVXwmZ0QkNhiaN3kiyII6D7GzaituQjFmFEWDgiBPhAx\\nGK+j7T6Zo7Kw/KwcpK/lIfKCffgbRYqAP6FZzygMLdHci/QW7Hsfh3z+LzRAo3Yf\\nchiYjKmu1IOYw9zl4EZ4IqFerYxtD9Xu/heiehifIVe82+LsJCNv1rwUlOuZyvoq\\nTe1hWup9ZHjThdoO2QEfUug9Om5PcHdrnMuHQD6+sFVGvUEj6Oez3ZjzJ4AyouiT\\n8OAbvg1208/V8tQrdOVecyj1G9CBNMEZ5OYpO+AJUQKBgQDhtT30Ek611rgVBCdm\\nsX5VgfVQ94pYKNituPUvTQRpa2NXA2NxD+yIM0SuT1zFdQZ09PcnaagOq7wsgJTb\\nGU0vPD0ckPXpvnYjfjCViY+NCyTKjDvCw6L5onfA1tocv9LiTaDz5hKVME/vOmHG\\nAeVBqOzNaUUyS05ukpVhzieC3QKBgQDRMruwo5cYLQKA5eNgx83EnQtwp75zykM+\\nHvs2RvwEuDE9YwBk8pcBImZUhhJp2cwMEZPRomNtxaIVQIvDDh3WhX0fvKIAHvQE\\nxp4jrJzlsRuZwuWkddvJdWzLM95C45tB20eon48dItUi//bbNHLCKXtcqlIpSb6B\\nG4JEGIP1CwKBgBps9uDxl8eQaSMExnwugcUPHyKoqMjjl2LXidVM5hxVl17jpavi\\nGmZj4kGqRwlTRztARwOVSjjVgIWRVFxGnRPPsLP8gN4qD3jeWF/ZqDXyPQ991a1a\\n7GTf0beBMC43g0A9qH+Fy10uN92hbzsYk7fZSEhQb+qQiJFHljfKRDP9AoGBAJnK\\nVSbHLMWuGSAPYLf+SuwWk5lvB9jxwbtCZWWCi7Ugf7pkNJ8BpDdGRbovkgvU/GeG\\n6Id9fODvIHfFKrnrf8379n9FWkcCelukdA8/z1wgdmz0VYQwzLHurFs6N1QvJS0l\\n+ikhm8FMoSmIyL5fcVoBytnVsG7/8pfRVFOhPij/AoGBAM45f2057MDynH6zwNdI\\nC3MStYmiK2R8X7hjADrDyFnbPIyPYu/h+G5VlQauOBGbJCzQtQYJO3KDb+wuCX0/\\nrjiSMH1K6I8Ynl0iXG5th+ukkgnnbf3xVedl4K7mm1WrPp62L/ZBqxTGeOnI3Ipa\\nfKHdwRWqtR65Fm1AJFrpDgKy\\n-----END PRIVATE KEY-----\\n",
+    "client_email": "huappengine@groupnexus-poc-285411.iam.gserviceaccount.com",
+    "client_id": "100366839218925549633",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/huappengine%40groupnexus-poc-285411.iam.gserviceaccount.com"
+    }
+    EOF
+  - "cat $CI_PIPELINE_ID.json"
+
+
+  script:
+  - gcloud auth activate-service-account --key-file $CI_PIPELINE_ID.json
+  - gcloud --project groupnexus-poc-285411 app deploy
+  - url=$(gcloud app services browse $ServiceName --no-launch-browser --project groupnexus-poc-285411)
+  - echo $url
+
+
+after_script:
+- rm $CI_PIPELINE_ID.json
