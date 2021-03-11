@@ -8,8 +8,9 @@ Template Project for HTML SCSS Track
 1. Fork the repository
 2. Clone the repository
 3. `cd huv19.1-html-css-final-assignment`
-4. `npm i `
-5. `npm start`
+4. `npm i parcel-bundler@1.12.3`
+5. `npm i `
+6. `npm start`
 
 
 ##### Your application is running on:
@@ -17,12 +18,12 @@ Template Project for HTML SCSS Track
 
 ## To get started:
 - Edit `index.html`
-- Don't change anything from `Mock.json` and use it as json structure for rendering HTML
+- Don't change anything from `mock.json` and use it as json structure for rendering HTML
 - Use `src` folder to add new files and folders
 
 ## Setup and check lint-errors:
 #### CLI:
-- `run: npm run lint`
+- run: `npm run lint`
 
 
 #### Editor
