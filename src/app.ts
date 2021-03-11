@@ -21,7 +21,7 @@ const fetchData = (): void => {
 const showUser = (user: IUser): void => {
   let output: string = `
         <div key='${user.id}' class='item'>
-          <p>Welcome to HU v19.1: ${user.name}, ${user.type}</p> 
+          <p>Welcome to HU v19: ${user.name}, ${user.type}</p> 
         </div>
     `;
   container.innerHTML += output;
