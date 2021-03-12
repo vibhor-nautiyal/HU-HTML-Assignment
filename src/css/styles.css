@@ -117,6 +117,7 @@ form{
 	display: grid;
 	grid-template-columns: 15% 75% 5% 5%;
 	text-align: center;
+	left:0px;
 }
 .pagename{
 	grid-column-start: 1;
@@ -138,6 +139,7 @@ form{
 	grid-template-columns: 15% 85%;
 	position:absolute;
 	top:64px;
+	left:0px;
 	/*grid-template-rows: 1fr;*/
 
 }
