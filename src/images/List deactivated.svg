@@ -1,0 +1,12 @@
+<svg id="List_deactivated" data-name="List deactivated" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path_2" data-name="Path 2" d="M0,0H24V24H0Z" fill="none"/>
+  <g id="Group_4" data-name="Group 4" transform="translate(2923 6912.738)">
+    <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(-2917 -6906.738)" fill="none" stroke="#c7ceec" stroke-width="1">
+      <rect width="13" height="13" stroke="none"/>
+      <rect x="0.5" y="0.5" width="12" height="12" fill="none"/>
+    </g>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="9" height="2" transform="translate(-2915 -6904.338)" fill="#c7ceec"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="9" height="2" transform="translate(-2915 -6901.338)" fill="#c7ceec"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="9" height="2" transform="translate(-2915 -6898.338)" fill="#c7ceec"/>
+  </g>
+</svg>

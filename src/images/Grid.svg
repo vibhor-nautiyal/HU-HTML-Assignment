@@ -1,0 +1,13 @@
+<svg id="Grid" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path_2" data-name="Path 2" d="M0,0H24V24H0Z" fill="none"/>
+  <g id="Group_2" data-name="Group 2" transform="translate(3010.086 6913.086)">
+    <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(-3004.086 -6907.086)" fill="none" stroke="#564bff" stroke-width="1">
+      <rect width="13" height="13" stroke="none"/>
+      <rect x="0.5" y="0.5" width="12" height="12" fill="none"/>
+    </g>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="4" height="4" transform="translate(-3002.086 -6905.086)" fill="#5253ff"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" width="4" height="4" transform="translate(-3002.086 -6900.086)" fill="#5253ff"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" width="4" height="4" transform="translate(-2997.086 -6905.086)" fill="#5253ff"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="4" height="4" transform="translate(-2997.086 -6900.086)" fill="#5253ff"/>
+  </g>
+</svg>
