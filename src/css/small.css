@@ -33,6 +33,7 @@
   	grid-column-end: 7;
   }
   .searchbar{
+  	min-width: 60px;
   	grid-row-start: 1;
   	grid-row-end: 2;
   	grid-column-start: 7;

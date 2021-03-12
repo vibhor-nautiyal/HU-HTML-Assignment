@@ -7,13 +7,13 @@ header{
 	top:0px;
 	padding-top: 10px;
 }
-ul{
+.navigation-list{
 	list-style-type: none;
 	margin:30px 20px 20px 30px;
 	color: rgb(118,133,182);
 	padding-left: 0px;
 }
-li{
+.navigation-list-item{
 	margin-bottom: 30px;
 }
 a{
@@ -55,6 +55,7 @@ a{
 
 }
 .searchbar{
+	min-width: 751.2px;
 	grid-column-start: 2;
 	grid-column-end: 3;
 	display: grid;
@@ -121,7 +122,7 @@ form{
 	grid-column-start: 1;
 	grid-column-end: 2;
 	background-image: url("../images/logo.svg");
-	
+	min-width: 152.28px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -145,7 +146,7 @@ form{
 .navigation{
 	position: fixed;
 	/*background-color: rgb(26,30,42); */
-
+	min-width: 152.28px;
 	margin-bottom: 10px;
 	background-color: #000E33;
 	height: 100%;
@@ -210,6 +211,8 @@ form{
 .card-list{
 	display: grid;
 	padding-top:25px;
+	padding-left:20px;
+	padding-right:20px;
 	grid-template-rows: repeat(4, 200px);
 	grid-row-gap: 10px;
 }
@@ -218,7 +221,8 @@ form{
 	padding:15px;
 	display: grid;
 	grid-template-rows: repeat(3,1fr);
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 60% 40%;
+	min-width: 236.84px;
 }
 
 .card-assignee{
@@ -294,6 +298,7 @@ form{
 	grid-row-start: 3;
 	grid-row-end: 4;
 	text-align: right;
+	/*margin-left: 118.88px;*/
 }
 .status{
 	width: 80px;
@@ -301,7 +306,7 @@ form{
 	color:white; 
 	text-align: center;
 	margin-top: 20px;
-	margin-left: 40px;
+	
 }
 
 .to-do .status{
