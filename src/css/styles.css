@@ -54,6 +54,8 @@ a{
 
 }
 .searchbar{
+	grid-column-start: 2;
+	grid-column-end: 3;
 	display: grid;
 	grid-template-columns: 5% 95%;
 }
@@ -68,7 +70,17 @@ form{
 	width:100%;
 }
 .notification-button{
+	grid-column-start: 3;
+	grid-column-end: 4;
 	padding: 15px 20px 15px 20px;
+}
+
+.user-img{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("../images/user_1.svg");
+	grid-column-start: 4;
+	grid-column-end: 5;
 }
 
 .category-name{
@@ -88,25 +100,40 @@ form{
 	text-align: right;
 	padding-right:20px;
 }
-
+.kebab{
+	visibility: hidden;
+}
 .wrapper{
 	display: grid;
 	top:0;
-	/*grid-template-columns: 15fr 85fr;*/
-	/*grid-template-rows: 7.47fr 92.52fr;*/
+	
 	grid-template-rows: 54px auto;
 }
 .header-grid{
 	grid-column-start: 1;
-	grid-column-end:3;
+	grid-column-end:2;
+	grid-row-start: 1;
+	grid-row-end: 2;
 	display: grid;
 	grid-template-columns: 15% 75% 5% 5%;
 	text-align: center;
 }
+.pagename{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	background-image: url("../images/logo.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.hamburger{
 
+	visibility: hidden;
+}
 .main-body-grid{
 	grid-column-start: 1;
-	grid-column-end:3; 
+	grid-column-end:2; 
+	grid-row-start: 2;
+	grid-row-end: 3;
 	display: grid;
 	grid-template-columns: 15% 85%;
 	position:absolute;
@@ -140,9 +167,11 @@ form{
 .tiled{
 	height:30px;
 	width:30px;
+	display: inline-block;
 }
 
 .list{
+	display: inline-block;
 	height:30px;
 	width:30px;
 }
