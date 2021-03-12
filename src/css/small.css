@@ -1,8 +1,4 @@
 @media screen and (max-width: 800px) {
-  body {
-    background-color: olive;
-  }
-
   .header-grid{
 
   	display: grid;
@@ -28,7 +24,7 @@
   	grid-row-start: 1;
   	grid-row-end: 2;
   	background-repeat: no-repeat;
-	background-position: center;
+	background-position: left;
   }
   .notification-button{
   	grid-row-start: 1;
@@ -65,7 +61,8 @@
 
   }
   .navigation{
-  	visibility: hidden;
+  	/*visibility: hidden;*/
+  	display: none;
   }
   .menu-choice{
   	grid-column-start: 1;
@@ -73,14 +70,28 @@
   	display: grid;
   	grid-template-columns: 1fr 8fr;
   	grid-template-rows: 112.675px 3fr;
-  	grid-row-gap: 30px;
+  	grid-row-gap: 15px;
   }
 
   .title-row{
-  	grid-template-columns: 6fr 2fr 2fr;
+  	grid-template-columns: 6fr 4fr;
+  	grid-template-rows: 1fr;
+  }
+  .heading{
+  	grid-column-start: 1;
+  	grid-column-end: 2;
   }
 
-  .tiled{
+  .filter-drop-down{
+  	grid-column-start: 2;
+  	grid-column-end: 3;
+  }
+  .view-style{
+  	display: none;
+  }
+
+
+  /*.tiled{
   	height: 25px;
   	width: 25px;
   }
@@ -88,7 +99,7 @@
   .list{
   	height: 25px;
   	width: 25px;
-  }
+  }*/
 
   .to-do{
   	grid-column-start: 1;

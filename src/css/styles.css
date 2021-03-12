@@ -123,6 +123,7 @@ form{
 	grid-column-start: 1;
 	grid-column-end: 2;
 	background-image: url("../images/logo.svg");
+	
 	background-repeat: no-repeat;
 	background-position: center;
 }
