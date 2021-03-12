@@ -68,15 +68,22 @@
   .menu-choice{
   	grid-column-start: 1;
   	grid-column-end: 4; 
-  	display: grid;
+  	/*display: grid;
   	grid-template-columns: 1fr 8fr;
   	grid-template-rows: 112.675px 3fr;
-  	grid-row-gap: 15px;
+  	grid-row-gap: 15px;*/
+  }
+  .category-container{
+
+  	display: grid;
+  	grid-template-rows: repeat(3,71.4px);
+  	grid-row-gap: 20px;
   }
 
   .title-row{
   	grid-template-columns: 6fr 4fr;
   	grid-template-rows: 1fr;
+  	height:114.675px;
   }
   .heading{
   	grid-column-start: 1;
@@ -104,25 +111,25 @@
 
   .to-do{
   	grid-column-start: 1;
-  	grid-column-end: 4;
+  	grid-column-end: 2;
 
-  	grid-row-start: 2;
-  	grid-row-end: 3; 
+  	grid-row-start: 1;
+  	grid-row-end: 2; 
   }
   
    .in-progress{
   	grid-column-start: 1;
-  	grid-column-end: 4;
+  	grid-column-end: 2;
 
-  	grid-row-start: 3;
-  	grid-row-end: 4; 
+  	grid-row-start: 2;
+  	grid-row-end: 3; 
   }
    .done{
   	grid-column-start: 1;
-  	grid-column-end: 4;
+  	grid-column-end: 2;
 
-  	grid-row-start: 4;
-  	grid-row-end: 5; 
+  	grid-row-start: 3;
+  	grid-row-end: 4; 
   }
   .kebab{
   	/*change this to kebab menu icon*/
@@ -137,6 +144,12 @@
   	z-index: 2;
   }
   .user-img{
+  	display: none;
+  }
+  .category{
+  	height: 71.4px;
+  }
+  .card-list{
   	display: none;
   }
 }
