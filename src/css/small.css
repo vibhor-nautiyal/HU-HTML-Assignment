@@ -68,8 +68,9 @@
   .menu-choice{
   	grid-column-start: 1;
   	grid-column-end: 4; 
+  	grid-template-columns: 1fr;
   	/*display: grid;
-  	grid-template-columns: 1fr 8fr;
+  	
   	grid-template-rows: 112.675px 3fr;
   	grid-row-gap: 15px;*/
   }
@@ -78,6 +79,7 @@
   	display: grid;
   	grid-template-rows: repeat(3,71.4px);
   	grid-row-gap: 20px;
+  	grid-template-columns: 1fr;
   }
 
   .title-row{
