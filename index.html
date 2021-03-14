@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.scss" />
-        <link rel="stylesheet" type="text/css" href="src/css/styles.css">
-        <link rel="stylesheet" type="text/css" href="src/css/small.css">
+        <!-- <link rel="stylesheet" type="text/css" href="src/css/styles.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="src/css/small.css"> -->
         <title>HTML CSS Final Assignment</title>
+</head>
 <body>
-    <div class="wrapper">
+    
         <header class="header-grid">
             <div class="pagename"></div>
             <div class="searchbar">
@@ -18,14 +19,13 @@
             <div class="notification-button"><img src="src/images/notification.svg"></div>
             <div class="user-img"><img src="src/images/user_1.svg"></div>
 
-            <div class="hamburger"></div>
-            <div class="kebab"></div>
-
-
+            <div id="hamburger"></div>
+            <div id="kebab"></div>
         </header>
+        
         <main class="main-body-grid">
-            <div class="navigation">
-                <ul class="navigation-list">
+            <div id="navigation">
+                <ul id="navigation-list">
                     <li class="navigation-list-item">
                         <a href=""><div class="list-item"><img style="margin-right: 10px;" class="dashboard-img" src="src/images/Dashboard_dark.svg">  Dashboard</div></a>
                     </li>   
@@ -58,7 +58,8 @@
                     <div class="category to-do">
                             
                         <div class="category-name">To Do</div>
-                        <ul class="card-list">
+                        <div class="expand-button" id="expand-to-do"><img src="src/images/expand.svg"></div>
+                        <ul class="card-list" id="to-do-list">
                             <li class="card">
                                 <div class="card-id">
                                     ID: PCG836342
@@ -157,7 +158,8 @@
                     <div class="category in-progress">
                             
                         <div class="category-name">In Progress</div>
-                        <ul class="card-list">
+                        <div class="expand-button" id="expand-in-progress"><img src="src/images/expand.svg"></div>
+                        <ul class="card-list" id="in-progress-list">
                             <li class="card">
                                 <div class="card-id">
                                     ID: PCG836342
@@ -234,7 +236,8 @@
                     <div class="category done">
                             
                         <div class="category-name">Done</div>
-                        <ul class="card-list">
+                        <div class="expand-button"  id="expand-done"><img src="src/images/expand.svg"></div>
+                        <ul class="card-list" id="done-list">
                             <li class="card">
                                 <div class="card-id">
                                     ID: PCG836342
@@ -332,8 +335,11 @@
             </div>
             <!-- world -->
         </main>
-    </div>
+    
     <script type="text/javascript" src="src/js/myscript.js"></script>
+    <!-- <script type="text/typescript" src="src/app.ts"></script>
+    <script type="text/javascript" src="typescript.min.js"></script>
+<script type="text/javascript" src="typescript.compile.min.js"></script> -->
 </body>
 </html>
 
