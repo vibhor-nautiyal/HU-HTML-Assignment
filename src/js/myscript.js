@@ -79,4 +79,6 @@ if(title=="Issues"){
 		
 	});
 }
-if(title=="")
+if(title==""){
+	
+}
