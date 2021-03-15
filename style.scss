@@ -67,7 +67,7 @@
 		min-width: 15%;
 		max-width: 15%;
 		margin-bottom: 10px;
-		background-color: #000E33;
+		background-color: #1c2237;
 		height: 100%;
 		width: 15%;
 		grid-column-start: 1;
@@ -88,7 +88,7 @@
 				.list-item {
 					padding: 5px 5px 5px 5px;
 					&:hover {
-						background-color: #6B3EFF;
+						background-color: #4d5aff;
 						color: white;
 						border-radius: 5px;
 						.dashboard-img {
@@ -102,7 +102,7 @@
 						}
 					}
 					&:active {
-						background-color: #6B3EFF;
+						background-color: #4d5aff;
 						color: white;
 						border-radius: 5px;
 						.dashboard-img {
@@ -185,7 +185,7 @@
 			column-gap: 30px;
 			width: 100%;
 			.category {
-				background-color: #D0D1FF;
+				background-color: #ebedf4;
 				width: auto;
 				.card-list {
 					margin-top: 0px;
