@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="style.scss" />
         <!-- <link rel="stylesheet" type="text/css" href="src/css/styles.css"> -->
         <!-- <link rel="stylesheet" type="text/css" href="src/css/small.css"> -->
-        <title>HTML CSS Final Assignment</title>
+        <title>Create</title>
 </head>
 <body>
     
@@ -27,13 +27,13 @@
             <div id="navigation">
                 <ul id="navigation-list">
                     <li class="navigation-list-item">
-                        <a href="dashboard.html"><div class="list-item"><img style="margin-right: 10px;" class="dashboard-img" src="src/images/Dashboard_dark.svg">  Dashboard</div></a>
+                        <a href="Dashboard.html"><div class="list-item"><img style="margin-right: 10px;" class="dashboard-img" src="src/images/Dashboard_dark.svg">  Dashboard</div></a>
                     </li>   
                     <li class="navigation-list-item">
-                        <a href="issues.html"><div class="list-item"><img style="margin-right: 10px;" class="issues-img"  src="src/images/Issues_dark.svg">  Issues</div></a>
+                        <a href="Issues.html"><div class="list-item"><img style="margin-right: 10px;" class="issues-img"  src="src/images/Issues_dark.svg">  Issues</div></a>
                     </li>   
                     <li class="navigation-list-item">
-                        <a href="create.html"><div class="list-item"><img style="margin-right: 10px;" class="create-img"  src="src/images/Create_dark.svg">  Create</div></a>
+                        <a href="Create.html"><div class="list-item"><img style="margin-right: 10px;" class="create-img"  src="src/images/Create_dark.svg">  Create</div></a>
                     </li>
                 </ul>   
             </div>
@@ -107,14 +107,18 @@
                     <label for="points">Story Points</label>
                     <input type="text"  id="points" name="points">
                     </div>
-                     <div id="attach-field">
+                    <div id="attach-field">
                     <label for="attach">Attachments</label>
-                    <input type="text"  id="attach" name="attach">
+                    <!-- <input type="text"  id="attach" name="attach"> -->
+                    <div id="attach" name="attach">
+                        <img src="src/images/Upload.svg">
+                         Drop files to attach or browse
+                    </div>
                     </div>
 
                     <div id="submit">
                     <!-- <label for="submit">Title</label> -->
-                    <input type="submit" id="submit" name="submit">
+                        <input type="submit" id="submit-button" name="submit">
                     </div>
                 </form>
                 
