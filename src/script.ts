@@ -5,15 +5,15 @@ console.log(data.length);
 
 if(title=="Issues"){
 
-	var expToDo:HTMLElement=document.getElementById("expand-to-do");
-	var expInProgress:HTMLElement=document.getElementById("expand-in-progress");
-	var expDone:HTMLElement=document.getElementById("expand-done");
-	var todo:HTMLElement=document.getElementById("to-do-list");
-	var inProgress:HTMLElement=document.getElementById("in-progress-list");
-	var done:HTMLElement=document.getElementById("done-list");
-	var ham:HTMLElement=document.getElementById("hamburger");
-	var nav:HTMLElement=document.getElementById("navigation");
-	var navList:HTMLElement=document.getElementById("navigation-list");
+	var expToDo:HTMLElement=document.getElementById("expand-to-do")!;
+	var expInProgress:HTMLElement=document.getElementById("expand-in-progress")!;
+	var expDone:HTMLElement=document.getElementById("expand-done")!;
+	var todo:HTMLElement=document.getElementById("to-do-list")!;
+	var inProgress:HTMLElement=document.getElementById("in-progress-list")!;
+	var done:HTMLElement=document.getElementById("done-list")!;
+	var ham:HTMLElement=document.getElementById("hamburger")!;
+	var nav:HTMLElement=document.getElementById("navigation")!;
+	var navList:HTMLElement=document.getElementById("navigation-list")!;
 
 	expToDo.addEventListener("click",function(){
 
