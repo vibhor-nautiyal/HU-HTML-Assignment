@@ -112,6 +112,7 @@ if(title=="Issues"){
 		cardAssignee.setAttribute("class","card-assignee");
 		cardAssignee.appendChild(assigneeName);
 		cardAssignee.appendChild(assigneeDesig);
+		cardAssignee.appendChild(assigneeTag);
 		
 		var prior=document.createElement("div");
 		prior.setAttribute("class","status");

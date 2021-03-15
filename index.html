@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="style.scss" />
         <!-- <link rel="stylesheet" type="text/css" href="src/css/styles.css"> -->
         <!-- <link rel="stylesheet" type="text/css" href="src/css/small.css"> -->
-        <title>HTML CSS Final Assignment</title>
+        <title>Issues</title>
 </head>
 <body>
     
@@ -38,92 +38,307 @@
                 </ul>   
             </div>
             <!-- hello -->
-
-
-            <div class="menu-choice" id="create">
+            <div class="menu-choice" id="issues">
                 <div class="title-row">
-                    <div class="heading">Create</div>
+                    <div class="heading">Issues</div>
+                    <div class="filter-drop-down">
+                        
+                        <span class="drop-down">Filter</span>
+                        <span class="drop-down-choice">Project</span>
+                        <span><img class="drop-down-icon" src="src/images/down-arrow.png"></span>
+                        
+                    </div>  
+                     
+                        
+                    <div class="view-style"><img class="tiled" src="src/images/Grid.svg"><img class="list" src="src/images/List deactivated.svg"></div>
                 </div>
 
-                <form id="create-form">
-                    <div id="title-field">
-                        <label for="title">Title</label>
-                        <textarea id="title" rows="3" cols="auto" name="title" placeholder="Text"></textarea>
+
+                <div class="category-container">
+                    <div class="category to-do">
+                            
+                        <div class="category-name">To Do</div>
+                        <div class="expand-button" id="expand-to-do"><img src="src/images/expand.svg"></div>
+                        <ul class="card-list" id="to-do-list">
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img">
+                                        
+                                    </div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
-                     <div id="type-field">
-                    <label for="type">Type</label>
-                    <!-- <input type="select" id ="type" name="Type"> -->
-                    <select id ="type" name="Type">
-                    </select>
-                    </div>
-                     <div id="status-field">
-                    <label for="status">Status</label>
-                    <input type="text" id="status" name="status">
-                    </div>
-                     <div id="priority-field">
-                    <label for="priority">Priority</label>
-                    <!-- <input type="select"id="priority"  name="priority"> -->
-                    <select id ="priority" name="priority">
-                    </select>
-                    </div>
-                     <div id="resolution-field">
-                    <label for="resolution">Resolution</label>
-                    <input type="text" id="resolution"  name="resolution">
-                    </div>
-                     <div id="affects-field">
-                    <label for="affects">Affects Version/s</label>
-                    <input type="text" id="affects" name="affects">
-                    </div>
-                     <div id="fix-field">
-                    <label for="fix">Fix</label>
-                    <input type="text" id="fix" name="fix" name="">
-                    </div>
-                    <div id="components-field">
-                    <label for="components">Component/s</label>
-                     <input type="text"  id="components" name="components">
-                    </div>
-                     <div id="assignee-field">
-                    <label for="assignee">Assignee</label>
-                    <input type="text" id="assignee" name="assignee">
-                    </div>
-                     <div id="label-field">
-                    <label for="label">Label</label>
-                    <input type="text"  id="label" name="label">
-                    </div> 
-                     <div id="reporter-field">
-                    <label for="reporter">Reporter</label>
-                    <input type="text" id="reporter" name="reporter">
-                    </div>
-                     <div id="sprint-field">
-                    <label for="sprint">Sprint</label>
-                    <input type="text"  id="sprint" name="sprint">
-                    </div>
-                     <div id="description-field">
-                    <label for="description">Description</label>
-                    <input type="text" id="description" name="description">
-                    </div>
-                     <div id="points-field">
-                    <label for="points">Story Points</label>
-                    <input type="text"  id="points" name="points">
-                    </div>
-                     <div id="attach-field">
-                    <label for="attach">Attachments</label>
-                    <input type="text"  id="attach" name="attach">
+                    
+
+
+
+                    <div class="category in-progress">
+                            
+                        <div class="category-name">In Progress</div>
+                        <div class="expand-button" id="expand-in-progress"><img src="src/images/expand.svg"></div>
+                        <ul class="card-list" id="in-progress-list">
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                               <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div id="submit">
-                    <!-- <label for="submit">Title</label> -->
-                    <input type="submit" id="submit" name="submit">
+
+
+
+
+                    <div class="category done">
+                            
+                        <div class="category-name">Done</div>
+                        <div class="expand-button"  id="expand-done"><img src="src/images/expand.svg"></div>
+                        <ul class="card-list" id="done-list">
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-id">
+                                    ID: PCG836342
+                                </div>
+                                <div class="card-date">
+                                    January 02, 2019
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="content-heading">Lorem Ipsum</h4>
+                                    <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                </div>
+                                <div class="card-assignee">
+                                    <div class="assignee-tag">Assignee</div>
+                                    <div class="assignee-img"></div>
+                                    <div class="assignee-name">Sijo M Peter</div>
+                                    <div class="assignee-desig">UI/UX Designer</div>
+                                </div>
+                                <div class="card-status">
+                                    Status
+                                    <div class="status">High Priority</div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </form>
-                
+
+
+                </div>
 
             </div>
             <!-- world -->
         </main>
     
-    <script type="text/typescript" src="src/script.ts"></script>
+    <script type="text/javascript" src="src/script.ts"></script>
     <!-- <script type="text/typescript" src="src/app.ts"></script>
     <script type="text/javascript" src="typescript.min.js"></script>
 <script type="text/javascript" src="typescript.compile.min.js"></script> -->
