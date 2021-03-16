@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-	
+	console.log("script has loaded");
 	var title:string=document.body.id;
 	const data:any = require('../mock.json').issues;
 	console.log(title);
@@ -61,8 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				nav.style.width="0px";
 				navList.style.display="none";	
 			}
-			
-			
 		});
 
 
@@ -87,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			contentHeading.innerHTML=curr.title;
 			
 			var contentText:HTMLParagraphElement=document.createElement("p");
-			contentText.setAttribute("class","content-heading");
+			contentText.setAttribute("class","content-text");
 			contentText.innerHTML=curr.description;		
 			
 			var cardContent:HTMLDivElement=document.createElement("div");
@@ -130,15 +128,22 @@ document.addEventListener("DOMContentLoaded", function() {
 			li.appendChild(cardContent);
 			li.appendChild(cardAssignee);
 			li.appendChild(cardStatus);
-		
+			// var div=document.createElement("div");
+			// div.appendChild(li);
+			var a:HTMLAnchorElement=document.createElement("a");
+			a.setAttribute("href","issueDetails.html");
+			// a.setAttribute("style","textDecoration:none");
+			// a.style.textDecoration="none";
+			a.setAttribute("style","color:black");
+			a.appendChild(li);
 			if(curr.status==="New"){
-				todo.appendChild(li);
+				todo.appendChild(a);
 			}
 			else if(curr.status==="inProgress"){
-				inProgress.appendChild(li);
+				inProgress.appendChild(a);
 			}
 			else{
-				done.appendChild(li);
+				done.appendChild(a);
 			}
 
 

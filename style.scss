@@ -200,6 +200,7 @@ $nav-color:#1c2237;
 					padding-right: 1.25rem;
 					line-height: 1.25rem;
 					.card {
+						
 						background-color: white;
 						padding: 0.938rem;
 						display: grid;
@@ -232,10 +233,13 @@ $nav-color:#1c2237;
 							.content-heading{
 								padding:0; 
 								margin:0;
+								font-size:25px;
+								margin-bottom: 10px;
 							}
 							.content-text{
 								color:grey; padding:0; 
 								margin:0;
+								font-size:15px;
 							}
 						}
 						.card-assignee {
@@ -736,6 +740,7 @@ $nav-color:#1c2237;
 				
 				column-gap: 1.875rem;
 				.card-type-1{
+					height: 6.167rem;
 					display: grid;
 					grid-template-rows: 40% 60%;
 					grid-template-columns: 70% 30%;
@@ -759,10 +764,13 @@ $nav-color:#1c2237;
 					grid-column: 1/2;
 
 					.table-heading{
+						padding-left: 1.25rem;
+						padding-top: 1.25rem;
 						font-size: 1.25rem;
+						display: block;
 					}
 					#high-prior{
-
+						margin-top: 1.875rem;
 						list-style-type: none;
 						
 					}
@@ -772,10 +780,13 @@ $nav-color:#1c2237;
 					grid-row: 1/2;
 					grid-column: 2/3;
 					.table-heading{
+						padding-left: 1.25rem;
+						padding-top: 1.25rem;
 						font-size: 1.25rem;
+						display: block;
 					}
 					#recent{
-						
+						margin-top: 1.875rem;
 						list-style-type: none;
 					}
 				}
@@ -784,16 +795,28 @@ $nav-color:#1c2237;
 					grid-row: 1/2;
 					grid-column: 3/4;
 					.table-heading{
+						padding-left: 1.25rem;
+						padding-top: 1.25rem;
 						font-size: 1.25rem;
+						display: block;
 					}
 					#all{
-						
+						margin-top: 1.875rem;
 						list-style-type: none;
 					}
 				}
 			}
 		}
 		
+
+	}
+	#issue-details{
+		.title-row{
+			@extend .title-row;
+			.heading{
+				@extend .heading;
+			}
+		}
 
 	}
 
