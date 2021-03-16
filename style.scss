@@ -658,6 +658,118 @@
 
 		}
 	}
+	#dashboard{
+		height: 100%;
+		grid-column: 2/3;
+		display: grid;
+		padding-right: 20px;
+		padding-left: 20px;
+		grid-template-rows: 114.675px auto;
+		grid-template-columns: 100%;
+		background-color: #F4F4F5;
+		grid-row-gap: 20px;
+		.title-row{
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			display: grid;
+			grid-template-columns: 80% 20%;
+			grid-template-rows: 114.675px;
+			.heading{
+				grid-column: 1/2;
+				grid-row: 1/2;
+				padding-left: 30px;
+				padding-top: 38px;
+				font-size: 26px;
+			}
+			.date-choice{
+				grid-row: 1/2;
+				grid-column: 2/3;
+				padding-left: 30px;
+				padding-top: 38px;
+				text-align: right;
+				.for-date{
+					color:grey;
+				}
+				.chosen-date{
+					padding-left: 20px;
+				}
+				.drop-down-icon {
+					padding-top: 20px;
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+		.dashboard-content{
+
+			grid-row: 2/3;
+			grid-column: 1/2;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
+			row-gap: 20px;
+			padding-left: 10px;
+			padding-right: 10px;
+			
+			.graph{
+				grid-row: 1/2;
+				grid-column: 1/2;
+				
+				.graph-img{
+					width: -webkit-fill-available;
+				}
+			}
+			.tabs{
+				grid-row: 2/3;
+				grid-column: 1/2;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: 1fr;
+				
+				column-gap: 30px;
+				
+				.high-prior-column{
+					background-color: white;
+					grid-row: 1/2;
+					grid-column: 1/2;
+					.table-heading{
+						font-size: 20px;
+					}
+					#high-prior{
+						list-style-type: none;
+					}
+				}
+				.recent-column{
+					background-color: white;
+					grid-row: 1/2;
+					grid-column: 2/3;
+					.table-heading{
+						font-size: 20px;
+					}
+					#recent{
+						
+						list-style-type: none;
+					}
+				}
+				.all-column{
+					background-color: white;
+					grid-row: 1/2;
+					grid-column: 3/4;
+					.table-heading{
+						font-size: 20px;
+					}
+					#all{
+						
+						list-style-type: none;
+					}
+				}
+			}
+		}
+		
+
+	}
 
 }
 

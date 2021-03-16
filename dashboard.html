@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.scss" />
+        <!-- <link rel="stylesheet" type="text/css" href="src/css/styles.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="src/css/small.css"> -->
+        <title>Create</title>
+</head>
+<body>
+    
+        <header class="header-grid">
+            <div class="pagename"></div>
+            <div class="searchbar">
+                <img class="search-img" src="src/images/icons-icon_search.svg">
+                <form><input class="search-text-area" type="text" name="search-term" placeholder="search"></form>
+            </div>
+            <div class="notification-button"><img src="src/images/notification.svg"></div>
+            <div class="user-img"><img src="src/images/user_1.svg"></div>
+
+            <div id="hamburger"></div>
+            <div id="kebab"></div>
+        </header>
+        
+        <main class="main-body-grid">
+            <div id="navigation">
+                <ul id="navigation-list">
+                    <li class="navigation-list-item">
+                        <a href="Dashboard.html"><div class="list-item"><img style="margin-right: 10px;" class="dashboard-img" src="src/images/Dashboard_dark.svg">  Dashboard</div></a>
+                    </li>   
+                    <li class="navigation-list-item">
+                        <a href="/"><div class="list-item"><img style="margin-right: 10px;" class="issues-img"  src="src/images/Issues_dark.svg">  Issues</div></a>
+                    </li>   
+                    <li class="navigation-list-item">
+                        <a href="Create.html"><div class="list-item"><img style="margin-right: 10px;" class="create-img"  src="src/images/Create_dark.svg">  Create</div></a>
+                    </li>
+                </ul>   
+            </div>
+            <!-- hello -->
+
+
+            <div class="menu-choice" id="dashboard">
+                <div class="title-row">
+                    <div class="heading">Dashboard</div>
+                    <div class="date-choice">
+                        <span class="for-date">For</span>
+                        <span class="chosen-date">January 2019</span>
+                        <span class="drop-down-icon"><img class="drop-down-icon" src="src/images/down-arrow.png"></span>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="graph"><img class="graph-img" src="src/images/graph.png" alt=""></div>
+                    <div class="tabs">
+                        <div class="high-prior-column">
+                            <div class="table-heading">High Priority</div>
+                            <ul id="high-prior">
+                                <li>Hello</li>
+                            </ul>
+                        </div>
+                        <div class="recent-column">
+
+                            <div class="table-heading">Recently Updated Issues</div>
+                            <ul id="recent">
+                                <li>Hello</li>
+                            </ul>
+                        </div>
+                        <div class="all-column">
+                            
+                            <div class="table-heading">All Issues</div>
+                            <ul id="all">
+                                <li>Hello</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <!-- world -->
+        </main>
+    
+    <script type="text/typescript" src="src/script.ts"></script>
+    <!-- <script type="text/typescript" src="src/app.ts"></script>
+    <script type="text/javascript" src="typescript.min.js"></script>
+<script type="text/javascript" src="typescript.compile.min.js"></script> -->
+</body>
+</html>
+
+
+

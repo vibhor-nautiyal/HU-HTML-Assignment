@@ -3,7 +3,7 @@ const data:any = require('../mock.json').issues;
 console.log(data);
 console.log(data.length);
 
-if(title=="Issues"){
+if(title==="Issues"){
 
 	var expToDo:HTMLElement=document.getElementById("expand-to-do")!;
 	var expInProgress:HTMLElement=document.getElementById("expand-in-progress")!;
@@ -65,9 +65,9 @@ if(title=="Issues"){
 
 
 
-	for(var i=0;i<data.length;i++){
+	for(var i:number =0;i<data.length;i++){
 
-		var curr=data[i];
+		var curr:any=data[i];
 
 		var li:HTMLLIElement=document.createElement("li");
 		li.setAttribute("class","card");
@@ -84,42 +84,42 @@ if(title=="Issues"){
 		contentHeading.setAttribute("class","content-heading");
 		contentHeading.innerHTML=curr.title;
 		
-		var contentText=document.createElement("p");
+		var contentText:HTMLParagraphElement=document.createElement("p");
 		contentText.setAttribute("class","content-heading");
 		contentText.innerHTML=curr.description;		
 		
-		var cardContent=document.createElement("div");
+		var cardContent:HTMLDivElement=document.createElement("div");
 		cardContent.setAttribute("class","card-content");
 		cardContent.appendChild(contentHeading);
 		cardContent.appendChild(contentText);
 		
-		var assigneeTag=document.createElement("div");
+		var assigneeTag:HTMLDivElement=document.createElement("div");
 		assigneeTag.setAttribute("class","assignee-tag");
 		assigneeTag.innerHTML="Assignee";
 
-		var assigneeImg=document.createElement("div");
+		var assigneeImg:HTMLDivElement=document.createElement("div");
 		assigneeImg.setAttribute("class","assignee-img");
 		
-		var assigneeName=document.createElement("div");
+		var assigneeName:HTMLDivElement=document.createElement("div");
 		assigneeName.setAttribute("class","assignee-name");
 		assigneeName.innerHTML=curr.assignee;
 
-		var assigneeDesig=document.createElement("div");
+		var assigneeDesig:HTMLDivElement=document.createElement("div");
 		assigneeDesig.setAttribute("class","assignee-desig");
 		assigneeDesig.innerHTML=curr.assignee_desig;
 
-		var cardAssignee=document.createElement("div");
+		var cardAssignee:HTMLDivElement=document.createElement("div");
 		cardAssignee.setAttribute("class","card-assignee");
 		cardAssignee.appendChild(assigneeName);
 		cardAssignee.appendChild(assigneeDesig);
 		cardAssignee.appendChild(assigneeTag);
 		cardAssignee.appendChild(assigneeImg);
 
-		var prior=document.createElement("div");
+		var prior:HTMLDivElement=document.createElement("div");
 		prior.setAttribute("class","status");
 		prior.innerHTML=curr.priority;
 
-		var cardStatus=document.createElement("div");
+		var cardStatus:HTMLDivElement=document.createElement("div");
 		cardStatus.setAttribute("class","card-status");
 		cardStatus.appendChild(prior);
 
@@ -144,6 +144,20 @@ if(title=="Issues"){
 
 
 }
-if(title==""){
+if(title==="Dashboard"){
 	
+	for(var i:number =0;i<data.length;i++){
+		var curr:any=data[i];
+		var heading:string=curr.title;
+		var content:string= curr.description;
+		var date:string=data.created;
+		var card:HTMLLIElement=document.createElement("li");
+		// card.setAttribute("class","dashboard-card-type-1");
+		
+		var cardHead:HTMLDivElement=document.createElement("div");
+		
+		var cardDate:HTMLDivElement=document.createElement("div");
+		var cardText:HTMLDivElement=document.createElement("div");
+		
+	} 
 }
