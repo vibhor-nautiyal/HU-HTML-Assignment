@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.scss" />
-        <title>Issues</title>
+        <title>Dashboard</title>
 </head>
-<body id="issues">
+<body id="dashboard">
     
         <header class="header-grid">
             <div class="pagename"></div>
@@ -25,10 +25,10 @@
             <div id="navigation">
                 <ul id="navigation-list">
                     <li class="navigation-list-item">
-                        <a href="Dashboard.html"><div class="list-item"><img style="margin-right: 10px;" class="dashboard-img" src="src/images/Dashboard_dark.svg">  Dashboard</div></a>
+                        <a href="/"><div class="list-item"><img style="margin-right: 10px;" class="dashboard-img" src="src/images/Dashboard_dark.svg">  Dashboard</div></a>
                     </li>   
                     <li class="navigation-list-item">
-                        <a href="/"><div class="list-item"><img style="margin-right: 10px;" class="issues-img"  src="src/images/Issues_dark.svg">  Issues</div></a>
+                        <a href="issues.html"><div class="list-item"><img style="margin-right: 10px;" class="issues-img"  src="src/images/Issues_dark.svg">  Issues</div></a>
                     </li>   
                     <li class="navigation-list-item">
                         <a href="create.html"><div class="list-item"><img style="margin-right: 10px;" class="create-img"  src="src/images/Create_dark.svg">  Create</div></a>
@@ -36,66 +36,50 @@
                 </ul>   
             </div>
             <!-- hello -->
-            <div class="menu-choice" id="issues">
+
+
+            <div class="menu-choice" id="dashboard">
                 <div class="title-row">
-                    <div class="heading">Issues</div>
-                    <div class="filter-drop-down">
-                        
-                        <span class="drop-down">Filter</span>
-                        <span class="drop-down-choice">Project</span>
-                        <span><img class="drop-down-icon" src="src/images/down-arrow.png"></span>
-                        
-                    </div>  
-                     
-                        
-                    <div class="view-style"><img class="tiled" src="src/images/Grid.svg"><img class="list" src="src/images/List deactivated.svg"></div>
+                    <div class="heading">Dashboard</div>
+                    <div class="date-choice">
+                        <span class="for-date">For</span>
+                        <span class="chosen-date">January 2019</span>
+                        <span class="drop-down-icon"><img class="drop-down-icon" src="src/images/down-arrow.png"></span>
+                    </div>
                 </div>
 
+                <div class="dashboard-content">
+                    <div class="graph"><img class="graph-img" src="src/images/graph.png" alt=""></div>
+                    <div class="tabs">
+                        <div class="high-prior-column">
+                            <div class="table-heading">High Priority</div>
+                            <ul id="high-prior">
+                                <li>Hello</li>
+                            </ul>
+                        </div>
+                        <div class="recent-column">
 
-                <div class="category-container">
-                    <div class="category to-do">
+                            <div class="table-heading">Recently Updated Issues</div>
+                            <ul id="recent">
+                                <li>Hello</li>
+                            </ul>
+                        </div>
+                        <div class="all-column">
                             
-                        <div class="category-name">To Do</div>
-                        <div class="expand-button" id="expand-to-do"><img src="src/images/expand.svg"></div>
-                        <ul class="card-list" id="to-do-list">
-                            
-                        </ul>
+                            <div class="table-heading">All Issues</div>
+                            <ul id="all">
+                                <li>Hello</li>
+                            </ul>
+                        </div>
+                        
                     </div>
-
-                    
-
-
-
-                    <div class="category in-progress">
-                            
-                        <div class="category-name">In Progress</div>
-                        <div class="expand-button" id="expand-in-progress"><img src="src/images/expand.svg"></div>
-                        <ul class="card-list" id="in-progress-list">
-                            
-                        </ul>
-                    </div>
-
-
-
-
-
-                    <div class="category done">
-                            
-                        <div class="category-name">Done</div>
-                        <div class="expand-button"  id="expand-done"><img src="src/images/expand.svg"></div>
-                        <ul class="card-list" id="done-list">
-                            
-                        </ul>
-                    </div>
-
-
                 </div>
 
             </div>
             <!-- world -->
         </main>
     
-    <script type="text/javascript" src="src/script.ts"></script>
+    <script type="text/typescript" src="src/script.ts"></script>
     
 </body>
 </html>

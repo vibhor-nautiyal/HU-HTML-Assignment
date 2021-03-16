@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.scss" />
+        <!-- <link rel="stylesheet" type="text/css" href="src/css/styles.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="src/css/small.css"> -->
         <title>Issues</title>
 </head>
-<body id="issues">
+<body>
     
         <header class="header-grid">
             <div class="pagename"></div>
@@ -25,10 +27,10 @@
             <div id="navigation">
                 <ul id="navigation-list">
                     <li class="navigation-list-item">
-                        <a href="/"><div class="list-item"><img style="margin-right: 10px;" class="dashboard-img" src="src/images/Dashboard_dark.svg">  Dashboard</div></a>
+                        <a href="dashboard.html"><div class="list-item"><img style="margin-right: 10px;" class="dashboard-img" src="src/images/Dashboard_dark.svg">  Dashboard</div></a>
                     </li>   
                     <li class="navigation-list-item">
-                        <a href="issues.html"><div class="list-item"><img style="margin-right: 10px;" class="issues-img"  src="src/images/Issues_dark.svg">  Issues</div></a>
+                        <a href="/"><div class="list-item"><img style="margin-right: 10px;" class="issues-img"  src="src/images/Issues_dark.svg">  Issues</div></a>
                     </li>   
                     <li class="navigation-list-item">
                         <a href="create.html"><div class="list-item"><img style="margin-right: 10px;" class="create-img"  src="src/images/Create_dark.svg">  Create</div></a>
@@ -71,7 +73,6 @@
                         <div class="category-name">In Progress</div>
                         <div class="expand-button" id="expand-in-progress"><img src="src/images/expand.svg"></div>
                         <ul class="card-list" id="in-progress-list">
-                            
                         </ul>
                     </div>
 
@@ -84,7 +85,6 @@
                         <div class="category-name">Done</div>
                         <div class="expand-button"  id="expand-done"><img src="src/images/expand.svg"></div>
                         <ul class="card-list" id="done-list">
-                            
                         </ul>
                     </div>
 
@@ -95,8 +95,10 @@
             <!-- world -->
         </main>
     
-    <script type="text/javascript" src="src/script.ts"></script>
-    
+    <script type="text/typescript" src="src/script.ts"></script>
+    <!-- <script type="text/typescript" src="src/app.ts"></script>
+    <script type="text/javascript" src="typescript.min.js"></script>
+<script type="text/javascript" src="typescript.compile.min.js"></script> -->
 </body>
 </html>
 
