@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	console.log(data.length);
 
 	if(title==="issues"){
+		console.log("in issues");
 
 		var expToDo:HTMLElement=document.getElementById("expand-to-do")!;
 		var expInProgress:HTMLElement=document.getElementById("expand-in-progress")!;
@@ -132,9 +133,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			// div.appendChild(li);
 			var a:HTMLAnchorElement=document.createElement("a");
 			a.setAttribute("href","issueDetails.html");
-			// a.setAttribute("style","textDecoration:none");
 			// a.style.textDecoration="none";
-			a.setAttribute("style","color:black");
+			// a.setAttribute("style","color:black");
+			a.setAttribute("style","text-decoration:none; color:black;");
+			a.style
 			a.appendChild(li);
 			if(curr.status==="New"){
 				todo.appendChild(a);
@@ -160,14 +162,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		var countAll:number=0;
 		var highPriorList:HTMLElement=document.getElementById("high-prior")!;
 		var recentList:HTMLElement=document.getElementById("recent")!;
-		var allList:HTMLElement=document.getElementById("all")!;		
+		var allList:HTMLElement=document.getElementById("all")!;	
+
 		for(var i:number =0;i<data.length;i++){
 			var curr:any=data[i];
 			var heading:string=curr.title;
 			var content:string= curr.description;
-			var date:string=data.created;
+			var date:string=curr.created;
 			var cardType1:HTMLLIElement=document.createElement("li");
-			cardType1.setAttribute("class","dashboard-card-type-1");
+			cardType1.setAttribute("class","card-type-1");
 			// var cartType2:HTMLLIElement=document.createElement("li");
 
 
@@ -184,21 +187,40 @@ document.addEventListener("DOMContentLoaded", function() {
 			cardType1.appendChild(cardHead);
 			cardType1.appendChild(cardDate);
 			cardType1.appendChild(cardText);
+			
+			var cloned1:HTMLElement = <HTMLElement>cardType1.cloneNode(true);
+			var cloned2:HTMLElement = <HTMLElement>cardType1.cloneNode(true);
+
 
 			if(countHigh<4 && curr.priority==="High"){
 				highPriorList.appendChild(cardType1);
 				countHigh++;
+				console.log(i);
 			}
 			if(countRecent<4){
-				recentList.appendChild(cardType1);
+				recentList.appendChild(cloned1);
 				countRecent++;
 			}
 			if(countAll<4){
-				allList.appendChild(cardType1);
+				allList.appendChild(cloned2);
 				countAll++;
+			}
+			else if(countHigh<4){
+				highPriorList.appendChild(cardType1);
+				countHigh++;
+				
 			}
 
 		} 
+		var view=document.createElement("li");
+		view.innerHTML="<a href='#'>View>> </a>";
+		view.style.textAlign="right";
+		view.style.paddingRight="0.8rem";
+		var view2:HTMLElement=<HTMLElement>view.cloneNode(true);
+		var view3:HTMLElement=<HTMLElement>view.cloneNode(true);
+		highPriorList.appendChild(view);
+		recentList.appendChild(view2);
+		allList.appendChild(view3);
 	}
 	else{
 		console.log("error");
