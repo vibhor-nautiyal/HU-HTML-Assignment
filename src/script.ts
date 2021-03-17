@@ -157,6 +157,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	else if(title==="dashboard"){
 
 		console.log("in dashboard");
+		var user1:string='url("src/images/user_1.svg");';
+		var user2:string='url("src/images/user_2.svg");';
+		var user3:string='url("src/images/user_3.svg");';
+		var user4:string='url("src/images/user_4.svg");';
+		// var users[:string]=["images/user_1.svg","images/user_2.svg","images/user_3.svg","images/user_4.svg"];
 		var countHigh:number=0;
 		var countRecent:number=0;
 		var countAll:number=0;
@@ -171,8 +176,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			var date:string=curr.created;
 			var cardType1:HTMLLIElement=document.createElement("li");
 			cardType1.setAttribute("class","card-type-1");
+			
 			// var cartType2:HTMLLIElement=document.createElement("li");
-
 
 			var cardHead:HTMLDivElement=document.createElement("div");
 			cardHead.setAttribute("class","card-head");
@@ -183,6 +188,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			var cardText:HTMLDivElement=document.createElement("div");
 			cardText.setAttribute("class","card-text");
 			cardText.innerHTML=content;
+
+			
 
 			cardType1.appendChild(cardHead);
 			cardType1.appendChild(cardDate);
@@ -202,7 +209,63 @@ document.addEventListener("DOMContentLoaded", function() {
 				countRecent++;
 			}
 			if(countAll<4){
-				allList.appendChild(cloned2);
+				var cardType2:HTMLLIElement=document.createElement("li");
+				cardType2.setAttribute("class","card-type-2");
+				var person:HTMLDivElement=document.createElement("div");
+				person.setAttribute("class","person");
+				var personPic:HTMLDivElement=document.createElement("div");
+				personPic.setAttribute("class","person-pic");
+				var personDetails:HTMLDivElement=document.createElement("div");
+				personDetails.setAttribute("class","person-details");			
+				var name:HTMLDivElement=document.createElement("div");
+				name.innerHTML=curr.assignee;
+				name.setAttribute("style","font-size: 1.25rem; font-weight: bolder;");
+				var desig:HTMLDivElement=document.createElement("div");
+				desig.innerHTML=curr.assignee_desig;
+				desig.setAttribute("style","color:grey;");
+				personDetails.appendChild(name);
+				personDetails.appendChild(desig);
+				if(countAll==0){
+					var prop:string="background-image:"+user1;
+				}
+				else if(countAll==1){
+					var prop:string="background-image:"+user2;
+				}
+				
+				else if(countAll==2){
+					var prop:string="background-image:"+user3;
+				}
+				
+				else{
+					var prop:string="background-image:"+user4;
+				}
+
+				personPic.setAttribute("style",prop);
+				
+				person.appendChild(personPic);
+				person.appendChild(personDetails);
+
+				var progressBar:HTMLDivElement=document.createElement("div");
+				progressBar.setAttribute("class","progress-bar");		
+				var bar:HTMLDivElement=document.createElement("div");
+				bar.setAttribute("style","height: 5px;background-color: blue;border-right:50px solid grey;margin-top: 20px;");
+				progressBar.appendChild(bar);
+
+				var highCount:HTMLDivElement=document.createElement("div");
+				highCount.setAttribute("class","high-count");	
+				highCount.setAttribute("style","margin-top:20px");		
+				highCount.innerHTML="High Priority Issue : 8";
+
+				var totalCount:HTMLDivElement=document.createElement("div");
+				totalCount.setAttribute("class","total-count");
+				totalCount.innerHTML="Total Issues : 10";
+				totalCount.setAttribute("style","margin-top:20px; text-align:right;");
+
+				cardType2.appendChild(person);
+				cardType2.appendChild(progressBar);
+				cardType2.appendChild(highCount);
+				cardType2.appendChild(totalCount);
+				allList.appendChild(cardType2);
 				countAll++;
 			}
 			else if(countHigh<4){
