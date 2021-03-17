@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	console.log(data.length);
 
 	if(title==="issues"){
+
 		console.log("in issues");
 
 		var expToDo:HTMLElement=document.getElementById("expand-to-do")!;
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var nav:HTMLElement=document.getElementById("navigation")!;
 		var navList:HTMLElement=document.getElementById("navigation-list")!;
 
+		
 		expToDo.addEventListener("click",function(){
 
 			
@@ -119,9 +121,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			var prior:HTMLDivElement=document.createElement("div");
 			prior.setAttribute("class","status");
 			prior.innerHTML=curr.priority;
-
+			var div:HTMLElement = document.createElement("div");
+			div.innerHTML="Status";
 			var cardStatus:HTMLDivElement=document.createElement("div");
 			cardStatus.setAttribute("class","card-status");
+			cardStatus.append(div);
 			cardStatus.appendChild(prior);
 
 			li.appendChild(cardId);
@@ -157,10 +161,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	else if(title==="dashboard"){
 
 		console.log("in dashboard");
-		var user1:string='url("src/images/user_1.svg");';
-		var user2:string='url("src/images/user_2.svg");';
-		var user3:string='url("src/images/user_3.svg");';
-		var user4:string='url("src/images/user_4.svg");';
+		var user1:string="src/images/user_1.svg";
+		var user2:string="src/images/user_2.svg";
+		var user3:string="src/images/user_3.svg";
+		var user4:string="src/images/user_4.svg";
 		// var users[:string]=["images/user_1.svg","images/user_2.svg","images/user_3.svg","images/user_4.svg"];
 		var countHigh:number=0;
 		var countRecent:number=0;
@@ -225,22 +229,28 @@ document.addEventListener("DOMContentLoaded", function() {
 				desig.setAttribute("style","color:grey;");
 				personDetails.appendChild(name);
 				personDetails.appendChild(desig);
+
+				var img:HTMLImageElement=document.createElement("img");
+
 				if(countAll==0){
-					var prop:string="background-image:"+user1;
+					img.setAttribute("src",user1);
+					console.log(user1);
 				}
 				else if(countAll==1){
-					var prop:string="background-image:"+user2;
+					img.setAttribute("src",user2);
 				}
 				
 				else if(countAll==2){
-					var prop:string="background-image:"+user3;
+					img.setAttribute("src",user3);
 				}
 				
 				else{
-					var prop:string="background-image:"+user4;
+					img.setAttribute("src",user4);
 				}
 
-				personPic.setAttribute("style",prop);
+				img.setAttribute("alt","user image");
+
+				personPic.appendChild(img);
 				
 				person.appendChild(personPic);
 				person.appendChild(personDetails);
@@ -285,13 +295,76 @@ document.addEventListener("DOMContentLoaded", function() {
 		recentList.appendChild(view2);
 		allList.appendChild(view3);
 	}
-	else{
-		console.log("error");
-	}	
+	if(title==="issueDetails"){
+		
+		var curr : any = data[0];
+		var type:HTMLElement=document.getElementById("div")!;
+		var priority:HTMLElement=document.getElementById("div")!;
+		var affect:HTMLElement=document.getElementById("div")!;
+		var components:HTMLElement=document.getElementById("div")!;
+		var label:HTMLElement=document.getElementById("div")!;
+		var sprint:HTMLElement=document.getElementById("div")!;
+		var story:HTMLElement=document.getElementById("div")!;
+		var status:HTMLElement=document.getElementById("div")!;
+		var revolution:HTMLElement=document.getElementById("div")!;
+		var fix:HTMLElement=document.getElementById("div")!;
+		var assignee:HTMLElement=document.getElementById("div")!;
+		var reporter:HTMLElement=document.getElementById("div")!;
+		var votes:HTMLElement=document.getElementById("div")!;
+		var watcher:HTMLElement=document.getElementById("div")!;
+		var created:HTMLElement=document.getElementById("div")!;
+		var updated:HTMLElement=document.getElementById("div")!;
+
+		type.className+=" data type-d";
+		type.innerHTML=curr.type;
+		priority.className+=(" data priority-d");
+		priority.innerHTML=curr.priority;
+		affect.className+=(" data affect-d");
+		affect.innerHTML=curr.affects
+		components.className+=(" data components-d");
+		components.innerHTML=curr.components;
+		label.className+=(" data label-d");
+		label.innerHTML=curr.labels;
+		sprint.className+=(" data sprint-d");
+		sprint.innerHTML=curr.curr.sprint;
+		story.className+=(" data story-d");
+		story.innerHTML=curr.story_points;
+		status.className+=(" data status-d");
+		status.innerHTML=curr.status;
+		revolution.className+=(" data revolution-d");
+		revolution.innerHTML=curr.resolution;
+		fix.className+=(" data fix-d");
+		fix.innerHTML=curr.fix_versions;
+		assignee.className+=(" data assignee-d");
+		assignee.innerHTML=curr.assignee;
+		reporter.className+=(" data reporter-d");
+		reporter.innerHTML=curr.reporter;
+		votes.className+=(" data votes-d");
+		votes.innerHTML=curr.votes;
+		watcher.className+=(" data watcher-d");
+		watcher.innerHTML=curr.watchers;
+		created.className+=(" data created-d");
+		created.innerHTML=curr.created;
+		updated.className+=(" data updated-d");
+		updated.innerHTML=curr.updated;
+		// type.classList.add("data");
+		// priority.classList.add("priority-d");
+		// affect.classList.add("affect-d");
+		// components.classList.add("components-d");
+		// label.classList.add("label-d");
+		// sprint.classList.add("sprint-d");
+		// story.classList.add("story-d");
+		// status.classList.add("status-d");
+		// revolution.classList.add("revolution-d");
+		// fix.classList.add("fix-d");
+		// assignee.classList.add("assignee-d");
+		// reporter.classList.add("reporter-d");
+		// votes.classList.add("votes-d");
+		// watcher.classList.add("watcher-d");
+		// created.classList.add("created-d");
+		// updated.classList.add("updated-d");
+
+
+
+	}
 });
-
-
-// window.onload = function(){  
-
-	
-// }

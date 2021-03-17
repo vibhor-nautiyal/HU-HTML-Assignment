@@ -796,7 +796,7 @@ html{
 						height: 6.167rem;
 						display: grid;
 						grid-template-rows: 60% 10% 30%;
-						grid-template-columns: 1fr 1fr;
+						grid-template-columns: 65% 35%;
 						border-top: 1px solid grey;
 						padding-top: 1rem;
 						padding-left: 1.25rem;
@@ -808,10 +808,11 @@ html{
 							.person-pic{
 								grid-row: 1/2;
 								grid-column: 1/2;
-								background-position: center;
-								background-repeat: no-repeat;
+								
 							}
 							.person-details{
+								font-size: medium;
+								font-weight: bold;
 								grid-row: 1/2;
 								grid-column: 2/3;
 							}
@@ -899,7 +900,7 @@ html{
 		#issue-details{
 			display: grid;
 			grid-template-columns: 1fr;
-			grid-template-rows: 7.167rem 5rem auto;
+			grid-template-rows: 7.167rem 5rem 28.668rem ;
 			.title-row{
 				grid-row: 1/2;
 				grid-column: 1/2;
@@ -908,10 +909,225 @@ html{
 				}
 			}
 			.buttons{
+				grid-row: 2/3;
+				grid-column: 1/2;
 				.button{
 					display: inline-block;
 					background-color: $card-list-color;
 					margin-right: 0.625rem;
+					width:fit-content;
+				}
+			}
+			.details{
+				grid-row: 3/4;
+				grid-column: 1/2;
+				display: grid;
+				grid-template-rows: repeat(7,1.5rem);
+				grid-template-columns: repeat(6,1fr);
+				column-gap: 1rem;
+				.fields{
+					color:grey;
+					font-size: medium;
+					
+				}
+				.data{
+					font-size: small;
+				}
+				.type-f{
+					grid-row:1/2;
+					grid-column: 1/2;
+				}
+				.priority-f{
+
+					grid-row:2/3;
+					grid-column: 1/2;
+				}
+				.affect-f{
+
+					grid-row:3/4;
+					grid-column: 1/2;
+				}
+				.components-f{
+
+					grid-row:4/5;
+					grid-column: 1/2;
+				}
+				.label-f{
+
+					grid-row:5/6;
+					grid-column: 1/2;
+				}
+				.sprint-f{
+
+					grid-row:6/7;
+					grid-column: 1/2;
+				}
+				.story-f{
+
+					grid-row:7/8;
+					grid-column: 1/2;
+				}	
+				.status-f{
+
+					grid-row:1/2;
+					grid-column: 3/4;
+				}
+				.revolution-f{
+
+					grid-row:2/3;
+					grid-column: 3/4;
+				}			
+				.fix-f{
+
+					grid-row:3/4;
+					grid-column: 3/4;
+				}
+				.assignee-f{
+
+					grid-row:1/2;
+					grid-column: 5/6;
+				}
+				.reporter-f{
+
+					grid-row:2/3;
+					grid-column: 5/6;
+				}
+				.votes-f{
+
+					grid-row:3/4;
+					grid-column: 5/6;
+				}
+				.watcher-f{
+
+					grid-row:4/5;
+					grid-column: 5/6;
+				}
+				.created-f{
+
+					grid-row:5/6;
+					grid-column: 5/6;
+				}
+				.updated-f{
+
+					grid-row:6/7;
+					grid-column: 5/6;
+				}
+
+				// data fields
+				.type-d{
+					grid-row:1/2;
+					grid-column: 2/3;
+				}
+				.priority-d{
+
+					grid-row:2/3;
+					grid-column: 2/3;
+				}
+				.affect-d{
+
+					grid-row:3/4;
+					grid-column: 2/3;
+				}
+				.components-f{
+
+					grid-row:4/5;
+					grid-column: 2/3;
+				}
+				.label-d{
+
+					grid-row:5/6;
+					grid-column: 2/3;
+				}
+				.sprint-d{
+
+					grid-row:6/7;
+					grid-column: 2/3;
+				}
+				.story-d{
+
+					grid-row:7/8;
+					grid-column: 2/3;
+				}	
+				.status-d{
+
+					grid-row:1/2;
+					grid-column: 4/5;
+				}
+				.revolution-d{
+
+					grid-row:2/3;
+					grid-column: 4/5;
+				}			
+				.fix-d{
+
+					grid-row:3/4;
+					grid-column: 4/5;
+				}
+				.assignee-d{
+
+					grid-row:1/2;
+					grid-column: 6/7;
+				}
+				.reporter-d{
+
+					grid-row:2/3;
+					grid-column: 6/7;
+				}
+				.votes-d{
+
+					grid-row:3/4;
+					grid-column: 6/7;
+				}
+				.watcher-d{
+
+					grid-row:4/5;
+					grid-column: 6/7;
+				}
+				.created-d{
+
+					grid-row:5/6;
+					grid-column: 6/7;
+				}
+				.updated-d{
+
+					grid-row:6/7;
+					grid-column: 6/7;
+				}
+			}
+			.extra-option{
+				display: grid;
+				grid-template-rows: repeat(5,4rem);
+				grid-template-columns: 66.66% 33.33%;
+				.description{
+					grid-row: 1/2;
+					grid-column: 1/2;
+				}
+				.agile{
+
+					grid-row: 1/2;
+					grid-column: 2/3;
+				}
+				.attachment{
+
+					grid-row: 2/3;
+					grid-column: 1/2;
+					.upload-button{
+						text-align: center;
+						border: 1px dotted grey;
+					}
+				}
+				.activity{
+
+					grid-row: 3/4;
+					grid-column: 1/2;
+				}
+				.comments{
+					grid-row: 4/5;
+					grid-column: 1/2;
+					.comment-box{
+						background-color: $card-list-color;
+						width: fit-content;
+					}
 				}
 			}
 
