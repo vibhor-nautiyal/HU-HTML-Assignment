@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const data:any = require('../mock.json').issues;
 	console.log(title);
 	console.log(data.length);
-
+	
 	if(title==="issues"){
 
 		console.log("in issues");
@@ -161,10 +161,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	else if(title==="dashboard"){
 
 		console.log("in dashboard");
-		var user1:string="src/images/user_1.svg";
-		var user2:string="src/images/user_2.svg";
-		var user3:string="src/images/user_3.svg";
-		var user4:string="src/images/user_4.svg";
+		
+		var user1:any="src/images/user_1.svg";
+		var user2:any="src/images/user_2.svg";
+		var user3:any="src/images/user_3.svg";
+		var user4:any="src/images/user_4.svg";
+
 		// var users[:string]=["images/user_1.svg","images/user_2.svg","images/user_3.svg","images/user_4.svg"];
 		var countHigh:number=0;
 		var countRecent:number=0;
@@ -298,22 +300,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	if(title==="issueDetails"){
 		
 		var curr : any = data[0];
-		var type:HTMLElement=document.getElementById("div")!;
-		var priority:HTMLElement=document.getElementById("div")!;
-		var affect:HTMLElement=document.getElementById("div")!;
-		var components:HTMLElement=document.getElementById("div")!;
-		var label:HTMLElement=document.getElementById("div")!;
-		var sprint:HTMLElement=document.getElementById("div")!;
-		var story:HTMLElement=document.getElementById("div")!;
-		var status:HTMLElement=document.getElementById("div")!;
-		var revolution:HTMLElement=document.getElementById("div")!;
-		var fix:HTMLElement=document.getElementById("div")!;
-		var assignee:HTMLElement=document.getElementById("div")!;
-		var reporter:HTMLElement=document.getElementById("div")!;
-		var votes:HTMLElement=document.getElementById("div")!;
-		var watcher:HTMLElement=document.getElementById("div")!;
-		var created:HTMLElement=document.getElementById("div")!;
-		var updated:HTMLElement=document.getElementById("div")!;
+		var type:HTMLElement=document.createElement("div")!;
+		var priority:HTMLElement=document.createElement("div")!;
+		var affect:HTMLElement=document.createElement("div")!;
+		var components:HTMLElement=document.createElement("div")!;
+		var label:HTMLElement=document.createElement("div")!;
+		var sprint:HTMLElement=document.createElement("div")!;
+		var story:HTMLElement=document.createElement("div")!;
+		var status:HTMLElement=document.createElement("div")!;
+		var revolution:HTMLElement=document.createElement("div")!;
+		var fix:HTMLElement=document.createElement("div")!;
+		var assignee:HTMLElement=document.createElement("div")!;
+		var reporter:HTMLElement=document.createElement("div")!;
+		var votes:HTMLElement=document.createElement("div")!;
+		var watcher:HTMLElement=document.createElement("div")!;
+		var created:HTMLElement=document.createElement("div")!;
+		var updated:HTMLElement=document.createElement("div")!;
 
 		type.className+=" data type-d";
 		type.innerHTML=curr.type;
